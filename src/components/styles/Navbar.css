@@ -1,0 +1,32 @@
+.navbar {
+  background: white;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.navbar  a {
+  color: rgb(28, 28, 107);
+  font-family: 'Times New Roman', Times, serif;
+  padding-left: 85px;
+  font-size: 28px;
+  text-decoration: none;
+  margin: 5px;
+  line-height: 3;
+  
+  
+}
+
+.navbar ul {
+display: flex;
+padding-right: 100px;
+margin: 0;
+list-style-type: none;
+justify-content: center;
+font-size: 17px;
+font-family: 'Times New Roman', Times, serif
+
+}
+

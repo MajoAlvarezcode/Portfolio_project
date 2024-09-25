@@ -1,0 +1,65 @@
+
+.container {
+    background:  rgb(247, 247, 247);
+    padding-left: 100px;
+    padding-top: 80px;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+  
+
+}
+
+.form {
+
+    margin-top: 35px;
+    margin-left: 0px;
+   
+  }
+  
+  .form input {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+    height: 30px;
+
+  }
+
+  
+  textarea {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+    height: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+
+  }
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    
+}
+
+.container h2{
+
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+.container button {
+
+    color: white;
+    background-color: black;
+    border: none;
+    height: 30px;
+    width: 75px;
+    margin-top: 25px;
+    justify-content: center;
+    margin-left: 3px;
+
+}
+
