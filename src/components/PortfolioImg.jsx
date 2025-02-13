@@ -2,7 +2,7 @@ import "./styles/Portfolio.css";
 import React, { useState } from "react"
 import KANBAN from '../assets/KANBAN.png'
 import README from '../assets/README.png'
-import SEARCH from '../assets/SEARCH.png'
+import BOOKTALK from '../assets/BOOKTALK.png'
 
 
 
@@ -73,7 +73,7 @@ function PortfolioImg() {
 
 
               <img
-                src={SEARCH}
+                src={BOOKTALK}
                 alt="kanban app image"
                 style={{ opacity: hoveredIndex === 2 ? 0.3 : 1, transition: 'opacity 0.3s ease' }}
               />
