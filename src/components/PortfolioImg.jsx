@@ -2,6 +2,7 @@ import "./styles/Portfolio.css";
 import React, { useState } from "react"
 import KANBAN from '../assets/KANBAN.png'
 import README from '../assets/README.png'
+import SEARCH from '../assets/SEARCH.png'
 
 
 
@@ -68,22 +69,22 @@ function PortfolioImg() {
             onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={handleMouseLeave}
           >
-            <a href="https://github.com/marioxabel/Running-tasks" target="_blank" rel="noopener noreferrer" className="portfolio-link">
+            <a href="https://github.com/MajoAlvarezcode/Book-Search-Engine" target="_blank" rel="noopener noreferrer" className="portfolio-link">
 
 
               <img
-                src={KANBAN}
+                src={SEARCH}
                 alt="kanban app image"
                 style={{ opacity: hoveredIndex === 2 ? 0.3 : 1, transition: 'opacity 0.3s ease' }}
               />
 
-              {hoveredIndex === 2 && <span className="link-text">Kanban app
+              {hoveredIndex === 2 && <span className="link-text">Book Search Engine app
 
               </span>}
 
             </a>
           </li>
-
+{/* 
           <li className="portfolio-item"
             onMouseEnter={() => handleMouseEnter(3)}
             onMouseLeave={handleMouseLeave}>
@@ -139,7 +140,7 @@ function PortfolioImg() {
 
             </a>
 
-          </li>
+          </li> */}
         </div>
 
 
