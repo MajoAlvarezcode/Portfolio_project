@@ -1,9 +1,9 @@
+import React, { useState, useEffect } from 'react';
 import './styles/Resume.css';
 
 const styles = {
     resumeStyle: {
         backgroundColor: 'rgb(247, 247, 247)',
-        height: '100vh',
         marginBottom: '0px',
         paddingLeft: '100px',
         paddingTop: '60px',
@@ -14,10 +14,8 @@ const styles = {
         paddingLeft: '10px',
         paddingTop: '0px',
         paddingBottom: '0px',
-
     },
     liStyle: {
-
         color: 'rgb(28, 28, 107)',
         fontSize: '18px',
         display: 'list-item',
@@ -26,15 +24,32 @@ const styles = {
         paddingBottom: '20px',
         paddingTop: '0px',
     },
-
-
 };
 
 function ResumeList() {
+    // Use state to track window width
+    const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+    // Update the height on window resize
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowHeight(window.innerHeight); // Update height dynamically
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    // Calculate the height of the section based on the window height
+    const sectionStyle = {
+        ...styles.resumeStyle,
+        height: windowHeight < 768 ? 'auto' : `${windowHeight}px`, // Adjust for small screens
+    };
+
     return (
-        <section style={styles.resumeStyle}>
-
-
+        <section style={sectionStyle}>
             <h1>RESUME</h1>
 
             <h2>Front-end and Proficiencies</h2>
