@@ -7,7 +7,7 @@ const styles = {
         minHeight: '100vh', // se adapta pero nunca menos que pantalla completa
         marginBottom: '0px',
         paddingLeft: '5%',
-        paddingTop: '60px',
+        paddingTop: '3%',
         paddingBottom: '30px', // asegúrate de que no quede espacio en blanco
         fontFamily: 'Times New Roman, Times, serif',
         overflowX: 'hidden', // importante para evitar desbordes horizontales
@@ -15,7 +15,7 @@ const styles = {
     ulStyle: {
         fontSize: '18px',
         paddingLeft: '10px',
-        paddingTop: '0px',
+        paddingTop: '10px',
         paddingBottom: '0px',
     },
     liStyle: {
@@ -27,6 +27,8 @@ const styles = {
         paddingBottom: '20px',
         paddingTop: '0px',
     },
+
+
 };
 
 function ResumeList() {
@@ -55,7 +57,7 @@ function ResumeList() {
         <section style={sectionStyle}>
             <h1>RESUME</h1>
 
-            <h2>Front-end and Proficiencies</h2>
+            <h3>Front-end and Proficiencies</h3>
             <ul style={styles.ulStyle}>
                 <li style={styles.liStyle}>CSS</li>
                 <li style={styles.liStyle}>JavaScript</li>
@@ -66,7 +68,7 @@ function ResumeList() {
                 <li style={styles.liStyle}>Bootstrap</li>
             </ul>
 
-            <h2>Back-end and Proficiencies</h2>
+            <h3>Back-end and Proficiencies</h3>
             <ul style={styles.ulStyle}>
                 <li style={styles.liStyle}>HTML</li>
                 <li style={styles.liStyle}>APIs</li>
