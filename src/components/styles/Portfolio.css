@@ -80,7 +80,8 @@ padding-left: 0px;
 
 .portfolio img {
 
-  height: 250px;
+  max-height: 250px;
+  width: 100%;
   opacity: 200%;
   transition: opacity 0.8 ease;
 
@@ -113,3 +114,8 @@ a {
 }
 
 
+@media (max-width: 768px) {
+  .portfolio img {
+    max-width: 90%;
+  }
+  }
