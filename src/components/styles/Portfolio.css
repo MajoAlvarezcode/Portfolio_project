@@ -1,6 +1,6 @@
 .portfolio {
 
-  height: 100%;
+  height: 100vh;
   background:  rgb(247, 247, 247);
   display: flex;
   justify-content: left;
