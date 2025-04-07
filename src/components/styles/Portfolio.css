@@ -118,4 +118,11 @@ a {
   .portfolio img {
     max-width: 90%;
   }
+
+
+.portfolio div {
+  padding-top: 0px;
+}
+
+
   }
