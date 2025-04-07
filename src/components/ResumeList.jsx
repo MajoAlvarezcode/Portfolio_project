@@ -4,10 +4,13 @@ import './styles/Resume.css';
 const styles = {
     resumeStyle: {
         backgroundColor: 'rgb(247, 247, 247)',
+        minHeight: '100vh', // se adapta pero nunca menos que pantalla completa
         marginBottom: '0px',
         paddingLeft: '100px',
         paddingTop: '60px',
+        paddingBottom: '30px', // asegúrate de que no quede espacio en blanco
         fontFamily: 'Times New Roman, Times, serif',
+        overflowX: 'hidden', // importante para evitar desbordes horizontales
     },
     ulStyle: {
         fontSize: '18px',
