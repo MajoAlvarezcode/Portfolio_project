@@ -1,153 +1,64 @@
+import React, { useState, useEffect } from "react";
 import "./styles/Portfolio.css";
-import React, { useState } from "react"
-import KANBAN from '../assets/KANBAN.png'
-import README from '../assets/README.png'
-import BOOKTALK from '../assets/BOOKTALK.png'
-
-
-
+import KANBAN from '../assets/KANBAN.png';
+import README from '../assets/README.png';
+import BOOKTALK from '../assets/BOOKTALK.png';
 
 function PortfolioImg() {
+  // Estado para controlar la visibilidad del h1
+  const [isVisible, setIsVisible] = useState(true);
 
+  // useEffect para manejar el tamaño de la pantalla
+  useEffect(() => {
+    const handleResize = () => {
+      // Si el ancho de la ventana es menor a 1200px, ocultar el h1
+      if (window.innerWidth <= 1200) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
 
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+    // Escucha de cambios en el tamaño de la ventana
+    window.addEventListener('resize', handleResize);
 
-  const handleMouseEnter = (index) => {
-    setHoveredIndex(index); // Show the text
-  };
+    // Llamar a handleResize al montar el componente para aplicar el estilo inicial
+    handleResize();
 
-  const handleMouseLeave = () => {
-    setHoveredIndex(null); // Hide the text
-  };
+    // Limpiar el event listener cuando el componente se desmonte
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <section className="portfolio">
+    
 
       <ul className="portfolio-list">
-
         <div>
-          <li className="portfolio-item"
-            onMouseEnter={() => handleMouseEnter(0)}
-            onMouseLeave={handleMouseLeave}
-          >
+          <li className="portfolio-item">
             <a href="https://github.com/marioxabel/Running-tasks" target="_blank" rel="noopener noreferrer" className="portfolio-link">
-
-
-              <img
-                src={KANBAN}
-                alt="kanban app image"
-                style={{ opacity: hoveredIndex === 0 ? 0.3 : 1, transition: 'opacity 0.3s ease' }}
-              />
-
-              {hoveredIndex === 0 && <span className="link-text">Kanban app
-
-              </span>}
-
+              <img src={KANBAN} alt="kanban app image" />
             </a>
           </li>
 
-          <li className="portfolio-item"
-            onMouseEnter={() => handleMouseEnter(1)}
-            onMouseLeave={handleMouseLeave}>
+          <li className="portfolio-item">
             <a href="https://github.com/MajoAlvarezcode/Creating-Readme-files" target="_blank" rel="noopener noreferrer" className="portfolio-link">
-              <img
-                src={README}
-                alt="Readme app image"
-                style={{ opacity: hoveredIndex === 1 ? 0.3 : 1, transition: 'opacity 0.3s ease' }}
-              />
-
-              {hoveredIndex === 1 && <span className="link-text">Readme app
-
-              </span>}
-
+              <img src={README} alt="Readme app image" />
             </a>
-
           </li>
         </div>
         <div>
-          <li className="portfolio-item"
-            onMouseEnter={() => handleMouseEnter(2)}
-            onMouseLeave={handleMouseLeave}
-          >
+          <li className="portfolio-item">
             <a href="https://github.com/MajoAlvarezcode/Book-Search-Engine" target="_blank" rel="noopener noreferrer" className="portfolio-link">
-
-
-              <img
-                src={BOOKTALK}
-                alt="kanban app image"
-                style={{ opacity: hoveredIndex === 2 ? 0.3 : 1, transition: 'opacity 0.3s ease' }}
-              />
-
-              {hoveredIndex === 2 && <span className="link-text">Book Search Engine app
-
-              </span>}
-
+              <img src={BOOKTALK} alt="kanban app image" />
             </a>
-          </li>
-{/* 
-          <li className="portfolio-item"
-            onMouseEnter={() => handleMouseEnter(3)}
-            onMouseLeave={handleMouseLeave}>
-            <a href="https://github.com/MajoAlvarezcode/Creating-Readme-files" target="_blank" rel="noopener noreferrer" className="portfolio-link">
-              <img
-                src={README}
-                alt="Readme app image"
-                style={{ opacity: hoveredIndex === 3 ? 0.3 : 1, transition: 'opacity 0.3s ease' }}
-              />
-
-              {hoveredIndex === 3 && <span className="link-text">Readme app
-
-              </span>}
-
-            </a>
-
           </li>
         </div>
-        <div>
-          <li className="portfolio-item"
-            onMouseEnter={() => handleMouseEnter(4)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a href="https://github.com/marioxabel/Running-tasks" target="_blank" rel="noopener noreferrer" className="portfolio-link">
-
-
-              <img
-                src={KANBAN}
-                alt="kanban app image"
-                style={{ opacity: hoveredIndex === 4 ? 0.3 : 1, transition: 'opacity 0.3s ease' }}
-              />
-
-              {hoveredIndex === 4 && <span className="link-text">Kanban app
-
-              </span>}
-
-            </a>
-          </li>
-
-          <li className="portfolio-item"
-            onMouseEnter={() => handleMouseEnter(5)}
-            onMouseLeave={handleMouseLeave}>
-            <a href="https://github.com/MajoAlvarezcode/Creating-Readme-files" target="_blank" rel="noopener noreferrer" className="portfolio-link">
-              <img
-                src={README}
-                alt="Readme app image"
-                style={{ opacity: hoveredIndex === 5 ? 0.3 : 1, transition: 'opacity 0.3s ease' }}
-              />
-
-              {hoveredIndex === 5 && <span className="link-text">Readme app
-
-              </span>}
-
-            </a>
-
-          </li> */}
-        </div>
-
-
-
-
       </ul>
-      <h1>PORTFOLIO</h1>
+        {/* Condicional para mostrar u ocultar el título */}
+        {isVisible && <h1>PORTFOLIO</h1>}
     </section>
   );
 }
