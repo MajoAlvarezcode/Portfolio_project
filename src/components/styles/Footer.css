@@ -4,12 +4,23 @@
   display: flex;
   justify-content: center; 
   align-items: center; 
-  padding: 0; 
+  padding: 0;
+  width: 100%; /* Asegurarse de que ocupe todo el ancho de la pantalla */
+}
+
+.section img {
+  height: 40px;
+  padding-right: 35px;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 600px) {
+  .section {
+    justify-content: center; /* Asegurarse de que los iconos sigan centrados */
+    padding: 20px; /* Un pequeño espacio alrededor */
   }
-  
-  
+
   .section img {
-    height: 40px;
-    padding-right: 35px;
-    
+    padding-right: 15px; /* Ajustar el espacio entre los iconos si es necesario */
   }
+}
