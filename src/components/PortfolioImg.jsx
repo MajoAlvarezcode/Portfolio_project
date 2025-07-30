@@ -3,7 +3,7 @@ import "./styles/Portfolio.css";
 import KANBAN from '../assets/KANBAN.png';
 import README from '../assets/README.png';
 import BOOKTALK from '../assets/BOOKTALK.png';
-import RELOJ from '../assets/reloj.jpg';
+import RELOJ from '../assets/ RELOJ.jpg';
 import ANNI from '../assets/ANNI.jpg'
 
 function PortfolioImg() {
