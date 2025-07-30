@@ -1,40 +1,112 @@
-.portfolio {
+/* Global reset y box model */
+* {
+  box-sizing: border-box;
+}
 
-  height: 100vh;
-  background:  rgb(247, 247, 247);
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.portfolio {
+  min-height: 100vh; /* en lugar de height: 100vh */
+  background: rgb(247, 247, 247);
   display: flex;
-  justify-content: left;
-  /* padding-left: 3%; */
-  padding-bottom: 30px;
-  padding-top: 30px;
-  
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0;
   
 }
 
-.portfolio div {
-  padding-top: 30px;
+.portfolio h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  font-weight: 600;
+  /* padding-top: 25px; */
+}
+
+.portfolio-columns {
+  display: flex;
+  justify-content: center;
+  /* gap: 50px; */
+  width: 100%;
+  /* padding: 0 0; */
+  padding-bottom: 50px;
+
+  position: relative;
+  border: solid 1px rgb(98, 98, 98);
+  
+}
+
+.portfolio-columns::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color:  rgb(98, 98, 98);
+  transform: translateX(-50%);
 }
 
 .portfolio-list {
-  list-style-type: none;
   display: flex;
-  display: inline;
-  flex-wrap: wrap;
-
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  /* padding: 0 5%; */
+  margin: 0;
+  width: 100%;
+  
 
 }
+
+.portfolio-list li {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: solid 1px rgb(98, 98, 98);
+  
+}
+
+
+
 
 .portfolio-item {
-  position: relative;
- 
+  list-style: none;
+  /* margin-bottom: 40px; */
+  padding-bottom: 20px;
+
+  text-align: center;
+  
 }
 
-
-
-.portfolio-link {
+/* .portfolio-link {
   text-decoration: none;
   position: relative;
   display: inline-block;
+  
+} */
+
+
+
+
+.right-image {
+  max-width: 100% !important;
+  max-height: 500px !important;
+}
+
+.portfolio img {
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: opacity 0.8s ease;
+  opacity: 200%;
+  
 }
 
 .portfolio-item:hover .portfolio-img {
@@ -53,79 +125,79 @@
   text-decoration: 1px underline;
 }
 
-.link-img {
-  position: absolute;
-  height: 30px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-
-}
-
 .portfolio-item:hover .link-text {
   display: inline;
 }
 
 
-
-.portfolio h1 {
-
-font-family: 'Times New Roman', Times, serif;
-font-weight: lighter;
-font-size: 25px;
-font-weight: 600;
-padding-top: 25px;
-padding-left: 0px;
+/* .portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  
+} */
 
 
+
+
+.portfolio-title-link {
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(55, 55, 55);
+  text-decoration: none;
+  text-align: center;
+  transition: text-decoration 0.3s;
 }
 
-.portfolio img {
-
-  max-height: 250px;
-  width: 100%;
-  opacity: 200%;
-  transition: opacity 0.8 ease;
-
+.portfolio-title-link:hover {
+text-transform:uppercase;
+  
   
 }
 
-ul {
+.portfolio img:hover {
 
-  display: flex;
-  display: block;
-  list-style-type: none;
-padding-left: 5%;
-
-}
-
-li {
-
-  padding-top: 30px;
-  margin-bottom: 30px;
-  display: inline;
-
-
-
-}
-
-a {
-
-  margin-right: 50px;
-
+  opacity: 50%;
 }
 
 
+
+
+/* Responsive: apilar columnas y eliminar línea divisoria */
 @media (max-width: 768px) {
-  .portfolio img {
+  .portfolio-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    /* padding: 0; */
+    padding-bottom: 50px;
+  }
+
+  .portfolio-columns::after {
+    display: none;
+  }
+
+  .portfolio-list {
+    width: 100%;
+    padding: 0;
+  }
+
+  .portfolio-list li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .portfolio img,
+  .portfolio-link img {
     max-width: 90%;
   }
 
-
-.portfolio div {
-  padding-top: 0px;
-}
-
-
+  .portfolio {
+    padding-left: 0;
+    padding-right: 0;
   }
+}

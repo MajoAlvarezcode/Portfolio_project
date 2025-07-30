@@ -4,7 +4,8 @@ import USER from '../assets/USER.png'
 
 const styles = {
 headerStyle: {
-  margin: '10px 0',
+  // margin: '10px 0',
+  
 },
 };
 

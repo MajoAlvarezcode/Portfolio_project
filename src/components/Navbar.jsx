@@ -8,7 +8,8 @@ liStyle: {
 color: 'rgb(111, 111, 111)',
 fontSize: '17px',
 margin: '0',
-paddingLeft: '50px',
+
+// paddingLeft: '50px',
 
 },
 

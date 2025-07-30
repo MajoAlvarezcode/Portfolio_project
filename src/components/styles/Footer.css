@@ -17,18 +17,25 @@ html, body {
 
 .section img {
   height: 40px;
-  padding-right: 35px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 /* Media query para pantallas pequeñas */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .section {
     justify-content: center;
     padding: 20px;
     width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
   }
 
-  .section img {
-    padding-right: 15px; /* Ajuste de padding si es necesario */
-  }
+
+ /* Ajuste de padding si es necesario */
+.section img {
+
+ margin-right: 50px;
+ margin-left: 50px;
+
+}
+  
 }

@@ -3,6 +3,8 @@ import "./styles/Portfolio.css";
 import KANBAN from '../assets/KANBAN.png';
 import README from '../assets/README.png';
 import BOOKTALK from '../assets/BOOKTALK.png';
+import RELOJ from '../assets/reloj.jpg';
+import ANNI from '../assets/ANNI.jpg'
 
 function PortfolioImg() {
   // Estado para controlar la visibilidad del h1
@@ -33,33 +35,89 @@ function PortfolioImg() {
 
   return (
     <section className="portfolio">
-    
 
-      <ul className="portfolio-list">
-        <div>
-          <li className="portfolio-item">
-            <a href="https://github.com/marioxabel/Running-tasks" target="_blank" rel="noopener noreferrer" className="portfolio-link">
-              <img src={KANBAN} alt="kanban app image" />
-            </a>
-          </li>
+      <div className="portfolio-columns">
+        <ul className="portfolio-list">
+          <li><h1>WEB PORTFOLIO</h1></li>
 
           <li className="portfolio-item">
-            <a href="https://github.com/MajoAlvarezcode/Creating-Readme-files" target="_blank" rel="noopener noreferrer" className="portfolio-link">
-              <img src={README} alt="Readme app image" />
+            <img src={KANBAN} alt="kanban app image" />
+          </li>
+          <li className="portfolio-link-item">
+            <a
+              href="https://github.com/marioxabel/Running-tasks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-title-link"
+            >
+              Running Tasks (Kanban App)
             </a>
           </li>
-        </div>
-        <div>
+
           <li className="portfolio-item">
-            <a href="https://github.com/MajoAlvarezcode/Book-Search-Engine" target="_blank" rel="noopener noreferrer" className="portfolio-link">
-              <img src={BOOKTALK} alt="kanban app image" />
+            <img src={README} alt="Readme app image" />
+          </li>
+          <li className="portfolio-link-item">
+            <a
+              href="https://github.com/MajoAlvarezcode/Creating-Readme-files"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-title-link"
+            >
+              Creating README Files
             </a>
           </li>
-        </div>
-      </ul>
-        {/* Condicional para mostrar u ocultar el título */}
-        {isVisible && <h1>PORTFOLIO</h1>}
+          <li className="portfolio-item">
+            <img src={BOOKTALK} alt="booktalk app image" />
+          </li>
+          <li className="portfolio-link-item">
+            <a
+              href="https://github.com/MajoAlvarezcode/Book-Search-Engine"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-title-link"
+            >
+              BookTalk Search Engine
+            </a>
+
+          </li>
+        </ul>
+
+        <ul className="portfolio-list">
+          <li><h1>GRAPHIC DESIGN PORTFOLIO</h1></li>
+
+          <li className="portfolio-item">
+            <img src={RELOJ} alt="Reloj lunar image" className="right-image" />
+          </li>
+          <li className="portfolio-link-item">
+            <a
+              href="https://www.behance.net/gallery/197333457/Comit-de-Proyectos-Reloj-lunar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-title-link"
+            >
+              Lunar Clock (Presskit)
+            </a>
+          </li>
+          <li className="portfolio-item">
+            <img src={ANNI} alt="Anni project image" className="right-image" />
+          </li>
+          <li className="portfolio-link-item">
+            <a
+              href="https://www.behance.net/gallery/197333063/Comit-de-Proyectos-Anni-chairs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-title-link"
+            >
+              ANNI (Presskit)
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
     </section>
+
   );
 }
 

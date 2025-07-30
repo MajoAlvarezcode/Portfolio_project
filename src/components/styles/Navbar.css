@@ -10,7 +10,7 @@
 .navbar a {
   color: rgb(28, 28, 107);
   font-family: 'Times New Roman', Times, serif;
-  padding-left: 85px;
+  padding-left: 50px;
   font-size: 28px;
   text-decoration: none;
   margin: 5px;
@@ -38,8 +38,11 @@
 
   .navbar ul {
     flex-direction: column; /* Los elementos se apilan en columna */
-    align-items: flex-start; /* Alinea los items a la izquierda */
+    text-align: center;
     padding-left: 0; /* Quita el padding extra */
+    padding-right: 0;
+    margin-left: 0;
+   
   }
 
   .navbar a {
@@ -47,6 +50,7 @@
     font-size: 22px; /* Ajusta el tamaño de la fuente */
    /* margin: 10px 0;  Agrega margen entre los enlaces */
    margin-top: 2px;
+   
   }
 
   .navbar a:first-child {

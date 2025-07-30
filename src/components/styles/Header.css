@@ -1,7 +1,8 @@
 .header {
   background: rgb(247, 247, 247);
   font-family: 'Times New Roman', Times, serif;
-  padding: 100px 2rem 2rem 2rem; /* Mejor controlado para responsividad */
+  /*padding: 100px 2rem 2rem 2rem;  Mejor controlado para responsividad */
+  padding-top: 3%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -50,13 +51,14 @@
     padding: 2rem 1rem;
   }
 
-  .header section {
+  /* .header section {
     padding: 0;
-    
-  }
+
+  } */
 
   .header h1 {
     text-align: center;
+
   }
 
   .header p {
