@@ -25,6 +25,7 @@ function Footer() {
 
     <section  className="section">
 
+
       <a href='https://github.com/MajoAlvarezcode' target="_blank" rel="noopener noreferrer" >
       <img src={GITHUB} alt="GitHub Logo" 
       onMouseEnter={handleMouseEnter}

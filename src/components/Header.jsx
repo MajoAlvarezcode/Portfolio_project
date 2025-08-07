@@ -21,15 +21,29 @@ function Header() {
 
           <section>
             <h1 >ABOUT ME</h1>
-            <p style={styles.headerStyle}>Hello! I’m Majo!, an enthusiastic Industrial Designer with a burgeoning passion for web design. My journey in the creative field began with a fascination for how design shapes our everyday lives. As an Industrial Designer, I’ve honed my skills in creating functional and aesthetically pleasing products, driven by a deep understanding of user needs and a commitment to innovation.</p>
+         <p style={styles.headerStyle}>
+  Hello! I’m Majo, an enthusiastic Industrial Designer with a growing interest in web design. My journey in the creative field began with a fascination for how design shapes our everyday lives. As an Industrial Designer, I’ve focused on creating functional and aesthetically pleasing products, guided by a strong understanding of user needs and a passion for innovation.
+</p>
 
-              <p> Recently, I've ventured into the world of web design, eager to expand my horizons and explore new ways to express creativity. This transition has allowed me to merge my industrial design expertise with digital design principles, enabling me to craft engaging and user-friendly web experiences.</p>
+<p>
+  Over time, I developed a deep appreciation for visual storytelling and graphic expression, which led me to explore graphic design as a way to communicate the essence and value of a product. Although I don't hold a formal degree in graphic design, I’ve continuously worked on strengthening my visual design skills, recognizing their importance in shaping user perception, narrating a product’s story, and enhancing its overall concept.
+</p>
 
-              <p>My interest in the creative field is fueled by a constant desire to learn and grow. I believe that embracing new challenges and skills not only enriches my professional abilities but also broadens my perspective on design as a whole. Through this portfolio, I invite you to explore my work and witness how my journey from industrial design to web design. </p>
+<p>
+  This growing interest naturally evolved into web design—an ideal space where I can merge both my industrial design background and my graphic sensibilities. Web design has become a platform for me to combine structure, usability, and visual impact into cohesive digital experiences.
+</p>
 
+<p>
+  While this portfolio focuses on my work in web and graphic design, it is rooted in my industrial design education and the multidisciplinary thinking it nurtured. I believe that embracing new challenges and expanding my skill set not only enriches my practice, but also deepens my understanding of design as a powerful and interconnected discipline.
+</p>
 
-              <p>Thank you for visiting!</p>
+<p>
+  Thank you for visiting— I invite you to explore my work!
+</p>
 
+<p>
+_This portfolio was coded in VS Code and rendered in Netlify.
+</p>
 
 
 
